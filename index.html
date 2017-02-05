@@ -109,6 +109,22 @@ arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(d
                 and all the patch related code and details can be found
                 <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8740">here</a>.</p>
         </section>
+        <section id="retino_classif">
+            <h2>Diabetic Retinopathy Classification</h2>
+            <p> In this work we evaluated the performance of multiple supervised learning algorithms and used them to
+                predict the classes of some synthetic data.  To this end we utilized a variety of software packages,
+                testing both Matlab and R machine learning packages before finally settling on Weka. a Java-based tool
+                containing implementations of most open-source algorithms wrapped into an easy-to-use GUI.</p>
+            <p>Many classes of Weka classifiers were tested, including: Bayes, function, meta-classifiers, rules, and
+                trees.  Of the final selections most were function-based (SVM, logistic regression, multilayer
+                perceptron), with a few tree-based and meta-classification approaches (random forest, rotation forest,
+                random subspace).  We found that Bayes made a systematic under-prediction of class “1”, as a result we
+                included only one copy of the Bayes classifier in the end results.  Rule-based classifiers had terrible
+                results and were completely excluded. </p>
+            <p> We also implemented a basic routine whereby individual algorithms vote and our final answer is
+                determined by a shifted mean of the votes, an approach inspired by random forests. We were able to
+                achieve an accuracy of about 77%.</p>
+        </section>
         <section id="heart_ECG">
             <h2>Heart disease prediction based on ECG data.</h2>
             <p> Electrocardiography (ECG or EKG from the Dutch Electrokardiogram) is a transthoracic (across the thorax

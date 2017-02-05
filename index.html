@@ -50,7 +50,7 @@ arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(d
               <a href="/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Academic Projects <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/#honeymix">Honey Mix</a></li>
-                <li><a href="/#Security_Aspects_Of_HTTP2">Security Aspects of HTTP2</a></li>
+                <li><a href="/#security_aspects_of_HTTP2">Security Aspects of HTTP2</a></li>
                 <li><a href="/#qat_device">Intel's QAT Device</a></li>
                 <li><a href="/#retino_classif">Diabetic Retinopathy Classification</a></li>
                 <li><a href="/#web_server">Web Server</a></li>
@@ -73,7 +73,6 @@ arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(d
     <div class="container">
 
       <div class="jumbotron section_data_even">
-        <section id="acad_projects">
         <h1> Academic Projects</h1>
         <section id="honeymix">
             <h2>Honey Mix (SDN based HoneyNet)</h2>
@@ -84,7 +83,31 @@ arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(d
             Networks<BR> and Network Function Virtualization (SDN/NFV Sec), March 2016, New Orleans, USA
             </div>
         </section> <!-- Honey Mix -->
-        </section> <!-- Acadmic projects-->
+        <section id="security_aspects_of_HTTP2">
+            <h2>Security Concerns in HTTP/2 Protocol</h2>
+            <p> HTTP 2 is a major modification to HTTP protocol with its predecessor being standardized in 1997. HTTP 2
+                (standardized in 2015) was developed from SPDY protocol, Google's experimental protocol, which proved to
+                be extremely efficient compared to HTTP 1.1. This protocol has seen tremendous acceptance rate,
+                according to W3Techs around 11% of top 10 Million websites already supported this protocol by December
+                2016.
+            </p>
+            <p> Since this is a new protocol with very high acceptance rate, we at SEFCOM Lab at ASU thought to look at
+                the protocol from security point of view.<BR>
+                To properly look into this protocol we chose NGINX and Apache as web-servers and Chrome, Firefox and
+                Safari as the client. The basic idea behind this choice was to cover most the of the web transaction and
+                by using these we covered roughly around 80% of the traffic.
+            </p>
+            <h4>Results / Bugs (patched and notified)</h4>
+            <p> We discovered a very serious Denial of Service bug in the Apache web-server. Apache HTTPD web server
+                versions 2.4.17 through 2.4.23 did not apply limitations on request headers correctly when experimental
+                module for the HTTP/2 protocol is used to access a resource. The net result is that a server allocates
+                too much memory instead of denying the request. This can lead to memory exhaustion and hence Denial of
+                Service attack on the server by a properly crafted request.
+                Attack script for the same can be found <a href="https://www.exploit-db.com/exploits/40909/">here</a>
+                and all the patch related code and details can be found
+                <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8740">here</a>.
+            </p>
+        </section>
       </div>
 
       <section id="prof_experience">

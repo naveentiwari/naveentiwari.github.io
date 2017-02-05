@@ -1,49 +1,147 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
+  <script data-x-lastpass="">(function(){var c=0;if("undefined"!==typeof CustomEvent&&"function"===typeof window.dispatchEvent){var a=function(a){try{if("object"===typeof a&&(a=JSON.stringify(a)),"string"===typeof a)return window.dispatchEvent(new CustomEvent("lprequeststart",{detail:{data:a,requestID:++c}})),c}catch(f){}},b=function(a){try{window.dispatchEvent(new CustomEvent("lprequestend",{detail:a}))}catch(f){}};"undefined"!==typeof XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.send&&(XMLHttpRequest.prototype.send=
+function(c){return function(f){var d=this,e=a(f);e&&d.addEventListener("loadend",function(){b({requestID:e,statusCode:d.status})});return c.apply(d,arguments)}}(XMLHttpRequest.prototype.send));"function"===typeof fetch&&(fetch=function(c){return function(f,d){var e=a(d),g=c.apply(this,arguments);if(e){var h=function(a){b({requestID:e,statusCode:a&&a.status})};g.then(h)["catch"](h)}return g}}(fetch))}})();
+(function(){if("undefined"!==typeof CustomEvent){var c=function(a){if(a.lpsubmit)return a;var b=function(){try{this.dispatchEvent(new CustomEvent("lpsubmit"))}catch(k){}return a.apply(this,arguments)};b.lpsubmit=!0;return b};window.addEventListener("DOMContentLoaded",function(){if(document&&document.forms&&0<document.forms.length)for(var a=0;a<document.forms.length;++a)document.forms[a].submit=c(document.forms[a].submit)},!0);document.createElement=function(a){return function(){var b=a.apply(this,
+arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(document.createElement)}})();
+</script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.png">
 
-    <head>
-        <link rel="icon" href="images/mn96x96.png"/>
-        <title>Naveen Tiwari</title>
-        <h1 id="welcome_index">Welcome</h1>
-        <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
-    </head>
+    <title>Naveen Tiwari</title>
 
-    <body>
-        <ul>
-          <li><a class="active">Home</a></li>
-          <li><a href="src/projects.html">Projects</a></li>
-          <li><a href="src/about.html">About</a></li>
-        </ul>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./resource/bootstrap.min.css" rel="stylesheet">
 
-        <div id="mainsection">
-        <h3>
-            <a id="welcome-to-my-web-page" class="anchor" href="#welcome-to-my-web-page" aria-hidden="true">
-                <span aria-hidden="true" class="octicon octicon-link"/>
-            </a>
-            Welcome to my web page.
-        </h3>
-        <p>(Work under progress)</p>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./resource/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-        <h3>
-            <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true">
-                <span aria-hidden="true" class="octicon octicon-link"/>
-            </a>
-            Support or Contact
-        </h3>
-        <p>Having trouble with Pages? Please mail me: </p>
+    <!-- Custom styles for this template -->
+    <link href="./resource/navbar-fixed-top.css" rel="stylesheet">
+    <link href="./resource/stylesheet.css" rel="stylesheet">
+    <script src="./resource/helper_script.js"></script>
+  </head>
 
-        <h3>
-            <a id="Quote" class="anchor" href="#quote" aria-hidden="true">
-                <span aria-hidden="true" class="octicon octicon-link"></span>
-            </a>
-            Quote
-        </h3>
-        <p>
-            But I have promises to keep,<BR>
-            And miles to go before I sleep,<BR>
-            And miles to go before I sleep.<BR>
-            - Robert Frost<BR>
-        </p>
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top top_navbar_full">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand top_navbar_left" href="/">Naveen Tiwari</a>
         </div>
-    </body>
-</html>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav top_navbar_left">
+            <li><a href="/#">Home</a></li>
+            <li class="dropdown">
+              <a href="/#acad_projects" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Academic Projects <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/#honeymix">Honey Mix</a></li>
+                <li><a href="/#Security_Aspects_Of_HTTP2">Security Aspects of HTTP2</a></li>
+                <li><a href="/#qat_device">Intel's QAT Device</a></li>
+                <li><a href="/#retino_classif">Diabetic Retinopathy Classification</a></li>
+                <li><a href="/#web_server">Web Server</a></li>
+                <li><a href="/#tib_OCR">OCR for Tibetan Script</a></li>
+              </ul>
+            </li>
+            <li><a href="/#prof_experience">Professional Experience</a></li>
+            <li><a href="docs/resume.pdf">Resume</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><img height="150" src="images/naveentiwari.jpg"/></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="jumbotron section_data_even">
+        <section id="acad_projects">
+        <h1> Academic Projects</h1>
+        <section id="honeymix">
+            <h2>Honey Mix (SDN based HoneyNet)</h2>
+            <div class="Paper_info">
+            HoneyMix: Toward SDN-based Intelligent Honeynet (<a href="http://www.public.asu.edu/~whan7/papers/honeymix-toward-honeynet-sdnnfvsec2016.pdf">PDF</a>)<BR>
+            Wonkyu Han, Ziming Zhao, Adam Doup&eacute; and Gail-Joon Ahn<BR>
+            In Proceedings of the ACM International Workshop on Security in Software Defined
+            Networks<BR> and Network Function Virtualization (SDN/NFV Sec), March 2016, New Orleans, USA
+            </div>
+        </section> <!-- Honey Mix -->
+        </section> <!-- Acadmic projects-->
+      </div>
+
+      <section id="prof_experience">
+        <div class="jumbotron section_data_odd">
+            <h1>Professional Experience</h1>
+            <h2>Research Assistance at Arizona State University (Current)</h2>
+              <p>I am currently working as an Research Assistant in <a href="http://sefcom.asu.edu/">Secure Engineering for Future Computing (SEFCOM)</a> at <a href="https://www.asu.edu">Arizona State University</a>. My major responsibilities include developing and deploying SDN based HoneyNet on the real world network.
+              </p>
+            <h2>Senior Software Engineer at Tally Solutions</h2>
+            <p>I have worked in Tally Solutions for 2 years as Software developer and 1 year as Senior Software developer. My major responsiblities included designing underlying structure for the persistence of objects in Tally's Propritery Database. I designed and developed 
+            </p>
+            <h2>Internship at Tally Solutions</h2>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="jumbotron section_data_even">
+            <h1>About Me</h1>
+            <p>
+                I am currently a student under the supervision of <a href="http://www.public.asu.edu/~gahn1/">Dr. Ahn, Gail-Joon</a> at <a href="https://www.asu.edu">Arizona State University</a> pursuing my Master of Science in Computer Science. My research interests are Software Defined Networks, Computer and Network Security, Automated Systems, Machine Learning and Artificial Intelligence. Currently I am working on SDN based HoneyNet to collect attack patterns on production systems and associated analysis on the data.
+            </p>
+            <p>
+                I have complete my bachlor's degree in Information Technology from <a href="https://www.iiita.ac.in">Indian Institute of Information Technology - Allahabad</a>.
+            </p>
+      </div>
+      </section>
+
+      <section id="contact">
+        <div class="jumbotron section_data_odd navbar">
+        <div class="contact_email_details navbar-left">
+            <h1>Contact</h1>
+            <h2><script>document.write(String.fromCharCode(69, 109, 97, 105, 108, 58));</script></h2>
+            <h3><script>writetab(); writePersonalMail();</script></h3>
+            <h3><script>writetab(); writeASUMail();</script></h3>
+            <br>
+        </div>
+        <div class="social_sites_icon navbar-right">
+          <a href="https://www.facebook.com/naveen.k.tiwari"><i style="font-size:48px" class="fa">&#xf082;</i></a>
+          <a href="https://github.com/naveentiwari"><i style="font-size:48px" class="fa">&#xf092;</i></a>
+          <a href="https://plus.google.com/u/0/111457850695071675869"><i style="font-size:48px" class="fa">&#xf0d5;</i></a>
+          <a href="https://www.linkedin.com/in/naveenktiwari"><i style="font-size:48px" class="fa">&#xf08c;</i></a>
+        </div>
+        </div>
+
+      </section>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./resource/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./resource/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./resource/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>

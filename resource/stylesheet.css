@@ -1,0 +1,40 @@
+.top_navbar_left{
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.top_navbar_full{
+    background-color: black;
+}
+.nav .active > a:active,a:hover;{
+    background:blue!important;
+    outline: 0;
+}
+
+.section_data_odd{
+    color: #333;
+}
+
+.section_data_even{
+    background-color: #2C3E50;
+    color: #fff;
+}
+
+.jumbotron{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.hard_display_override{
+    display: inline !important;
+}
+
+.social_sites_icon{
+    margin-top: 80px;
+}
+
+.Paper_info{
+    font-style: oblique;
+    color: #b3b3b3
+}
